@@ -13,19 +13,19 @@ public:
                 int p = j+1, q = n-1;
 
                 while(p < q){
-                    long long sum = (long long)nums[i] + (long long)nums[j] 
+                    long long sum = (long long)nums[i] + (long long)nums[j]
                                      + (long long)nums[p] + (long long)nums[q];
+
                     if(sum > tar){
                         q--;
-                    } else if(sum < tar){
+                    }else if(sum < tar){
                         p++;
-                    } else {
+                    }else{
                         ans.push_back({nums[i],nums[j],nums[p],nums[q]});
                         p++; q--;
 
                         while(p < q && nums[p] == nums[p-1]) p++;
-
-                    }
+                    }                                     
                 }
                 j++;
                 while(j < n && nums[j] == nums[j-1]) j++;
