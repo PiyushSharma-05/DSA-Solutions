@@ -25,3 +25,7 @@ public:
         return maxSum;
     }
 };
+
+// Pattern: Fixed-Size Sliding Window (with Hash Map / Frequency Map)
+// Space: O(K)
+// Time: O(N)

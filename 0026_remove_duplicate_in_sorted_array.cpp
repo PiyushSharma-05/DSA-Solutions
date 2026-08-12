@@ -12,3 +12,7 @@ public:
         return i+1;
     }
 };
+
+// Pattern: Two Pointers (Slow and Fast Pointer)
+// Space: O(1)
+// Time: O(N)

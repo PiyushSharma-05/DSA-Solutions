@@ -22,3 +22,7 @@ public:
         return slow == 1;
     }
 };
+
+// Pattern: Hash Set for Cycle Detection
+// Space: O(log N)
+// Time: O(log N)

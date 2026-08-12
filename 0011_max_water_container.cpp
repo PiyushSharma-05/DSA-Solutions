@@ -15,3 +15,7 @@ public:
         return maxArea;
     }
 };
+
+// Pattern: Two Pointers (Opposite Ends)
+// Space: O(1)
+// Time: O(N)

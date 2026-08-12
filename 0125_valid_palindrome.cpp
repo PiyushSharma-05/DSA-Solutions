@@ -20,3 +20,7 @@ public:
         return true;
     }
 };
+
+// Pattern: String Preprocessing + Two Pointers
+// Space: O(N)
+// Time: O(N)

@@ -21,3 +21,7 @@ public:
         return n == 1;
     }
 };
+
+// Pattern: Fast & Slow Pointers (Floyd's Cycle Detection)
+// Space: O(1)
+// Time: O(log N)

@@ -16,3 +16,7 @@ public:
         return maxNum;
     }
 };
+
+// Pattern: Variable Size Sliding Window (with Hash Map / Frequency Map)
+// Space: O(min(N, Σ)) — where N is string length and Σ is character set size (e.g., O(1) if fixed alphabet like ASCII)
+// Time: O(N)
