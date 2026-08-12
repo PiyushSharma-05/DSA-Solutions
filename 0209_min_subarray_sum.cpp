@@ -1,21 +1,18 @@
-#include<climits>
 class Solution {
 public:
     int minSubArrayLen(int target, vector<int>& nums) {
-        int minLen = INT_MAX;
-        bool exist = false;
-        int left = 0, tarSum = 0;
+        int n = nums.size();
+        int minLen = n + 1;
+        int left = 0, currSum = 0;
         for(int right=0; right<nums.size(); right++){
-            tarSum += nums[right];
+            currSum += nums[right];
 
-            while(tarSum >= target){
-                exist = true;
+            while(currSum >= target){
                 minLen = min(minLen, right - left + 1) ;
-                tarSum -= nums[left];
-                left++;
+                currSum -= nums[left++];
             }
         }
-        return exist? minLen:0;
+        return minLen == n+1 ? 0 : minLen;
     }
 };
 
