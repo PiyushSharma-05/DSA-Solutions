@@ -1,26 +1,29 @@
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        int n=nums.size();
-        int st=0, end=n-1;
-        while(st<=end){
-            int mid = st + (end - st)/2;
+        int i = 0, j = nums.size()-1;
+        while(i<=j){
+            int mid = i + (j-i)/2;
             if(nums[mid] == target) return mid;
-        
-            if(nums[st] <= nums[mid]){
-                if(target<=nums[mid] && target>=nums[st]){
-                    end=mid-1;
+            if(nums[i] <= nums[mid]){
+                if(target >= nums[i] && target <= nums[mid]){
+                    j = mid - 1;
                 } else{
-                    st=mid+1;
+                    i = mid + 1;
                 }
             } else{
-                if(target>=nums[mid] && target<=nums[end]){
-                    st=mid+1;
+                if(target >= nums[mid] && target <= nums[j]){
+                    i = mid + 1;
                 } else{
-                    end=mid-1;
+                    j = mid - 1;
                 }
             }
         }
         return -1;
     }
 };
+
+
+// Pattern: Modified Binary Search (Rotated Sorted Array)
+// Space: O(1)
+// Time: O(log N)
